@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+body {
+    background-image: url("world.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background-color: darkblue;
+    border-radius: 10px;
+    color: orange;
+    font-family: "Open Sans", sans-serif;
+    padding: 2px;
+    text-align: center;
+}
+
+.card {
+    background-color: orange;
+    border-radius: 10px;
+    color: darkblue;
+    /*font: 1.5em "Open Sans", sans-serif;*/
+    height: 150px;
+    margin: 5px;
+    position: relative;
+    width: 150px;
+    text-align: center;
+    transition: 1s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-color: lightsalmon;
+    color: blue;
+    transform: rotateY(180deg);
+}
+
+.front {
+    z-index: 1;
+    background-color: orange;
+    color: darkblue;
+    backface-visibility: hidden;
+}
+
+.front, .back {
+    border-right: 10px;
+    font: 1.5em "Open Sans", sans-serif;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
